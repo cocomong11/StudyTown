@@ -1,0 +1,182 @@
+// src/utils/constants.js
+
+export const BUILDINGS = [
+  {
+    id: 'cafe',
+    name: '스터디카페',
+    emoji: '☕',
+    unlockMins: 0,
+    bgColor: '#FFF8F0',
+    accentColor: '#C8855A',
+    description: '아늑한 카페에서 집중해요',
+    seats: 6,
+    npcCount: 4,
+  },
+  {
+    id: 'library',
+    name: '도서관',
+    emoji: '📚',
+    unlockMins: 60,
+    bgColor: '#F0F4FF',
+    accentColor: '#5C7AB0',
+    description: '조용한 도서관에서 깊이 공부',
+    seats: 8,
+    npcCount: 5,
+  },
+  {
+    id: 'park',
+    name: '공원 카페',
+    emoji: '🌿',
+    unlockMins: 200,
+    bgColor: '#F0FFF4',
+    accentColor: '#4A9A3A',
+    description: '자연 속에서 힐링 공부',
+    seats: 4,
+    npcCount: 3,
+  },
+  {
+    id: 'cinema',
+    name: '영화관 라운지',
+    emoji: '🎬',
+    unlockMins: 400,
+    bgColor: '#F5F0FF',
+    accentColor: '#8060A0',
+    description: '특별한 분위기의 집중 공간',
+    seats: 5,
+    npcCount: 3,
+  },
+  {
+    id: 'office',
+    name: '스마트 오피스',
+    emoji: '💼',
+    unlockMins: 700,
+    bgColor: '#F0F8FF',
+    accentColor: '#4A6080',
+    description: '프로페셔널하게 업무 집중',
+    seats: 6,
+    npcCount: 4,
+  },
+  {
+    id: 'rooftop',
+    name: '루프탑 라운지',
+    emoji: '🌙',
+    unlockMins: 1200,
+    bgColor: '#0D1A30',
+    accentColor: '#6080C0',
+    description: '밤하늘 아래 감성 공부',
+    seats: 4,
+    npcCount: 2,
+  },
+];
+
+export const PETS = [
+  { id: 'cat', name: '나비', emoji: '🐱', condition: 'first_session', conditionLabel: '첫 세션 완료' },
+  { id: 'dog', name: '뭉치', emoji: '🐶', condition: 'streak3', conditionLabel: '3일 연속 공부' },
+  { id: 'rabbit', name: '토순이', emoji: '🐰', condition: 'total60', conditionLabel: '총 60분 달성' },
+  { id: 'turtle', name: '거북이', emoji: '🐢', condition: 'session10', conditionLabel: '세션 10회 완료' },
+  { id: 'hamster', name: '햄순이', emoji: '🐹', condition: 'single60', conditionLabel: '60분 연속 집중' },
+  { id: 'fox', name: '여우비', emoji: '🦊', condition: 'total300', conditionLabel: '총 300분 달성' },
+  { id: 'penguin', name: '펭수', emoji: '🐧', condition: 'streak7', conditionLabel: '7일 연속 공부' },
+  { id: 'bear', name: '곰돌이', emoji: '🐻', condition: 'total600', conditionLabel: '총 600분 달성' },
+  { id: 'frog', name: '개굴이', emoji: '🐸', condition: 'allbuildings', conditionLabel: '모든 건물 방문' },
+  { id: 'deer', name: '사슴이', emoji: '🦌', condition: 'mission10', conditionLabel: '미션 10개 완료' },
+  { id: 'dragon', name: '용이', emoji: '🐲', condition: 'total1000', conditionLabel: '총 1000분 달성' },
+  { id: 'unicorn', name: '유니', emoji: '🦄', condition: 'allpets10', conditionLabel: '펫 10마리 획득' },
+];
+
+export const MISSIONS = [
+  { id: 'first_session', name: '첫 걸음', desc: '첫 번째 공부 세션 완료', icon: '🌱', reward: 10, type: 'sessions', goal: 1 },
+  { id: 'session5', name: '공부 습관', desc: '세션 5회 완료', icon: '📖', reward: 30, type: 'sessions', goal: 5 },
+  { id: 'session10', name: '열정 학생', desc: '세션 10회 완료', icon: '🔥', reward: 60, type: 'sessions', goal: 10 },
+  { id: 'session30', name: '공부 장인', desc: '세션 30회 완료', icon: '🏆', reward: 200, type: 'sessions', goal: 30 },
+  { id: 'total30', name: '30분 챌린지', desc: '총 30분 달성', icon: '⏱️', reward: 15, type: 'totalMins', goal: 30 },
+  { id: 'total60', name: '1시간 달성', desc: '총 60분 달성', icon: '⏰', reward: 30, type: 'totalMins', goal: 60 },
+  { id: 'total300', name: '5시간 달성', desc: '총 300분 달성', icon: '🌟', reward: 100, type: 'totalMins', goal: 300 },
+  { id: 'total600', name: '10시간 달성', desc: '총 600분 달성', icon: '💫', reward: 200, type: 'totalMins', goal: 600 },
+  { id: 'total1000', name: '공부왕', desc: '총 1000분 달성', icon: '👑', reward: 500, type: 'totalMins', goal: 1000 },
+  { id: 'streak3', name: '3일 연속', desc: '3일 연속 공부', icon: '🔗', reward: 40, type: 'streak', goal: 3 },
+  { id: 'streak7', name: '1주일 연속', desc: '7일 연속 공부', icon: '🌈', reward: 100, type: 'streak', goal: 7 },
+  { id: 'streak30', name: '한 달 연속', desc: '30일 연속 공부', icon: '🎖️', reward: 500, type: 'streak', goal: 30 },
+  { id: 'single60', name: '60분 집중', desc: '60분 연속 집중 1회', icon: '🎯', reward: 40, type: 'singleSession', goal: 60 },
+  { id: 'single90', name: '90분 마라톤', desc: '90분 집중 1회', icon: '🏃', reward: 60, type: 'singleSession', goal: 90 },
+  { id: 'single120', name: '2시간 집중왕', desc: '120분 집중 1회', icon: '🦁', reward: 100, type: 'singleSession', goal: 120 },
+  { id: 'allbuildings', name: '탐험가', desc: '모든 건물 방문', icon: '🗺️', reward: 80, type: 'buildings', goal: 6 },
+  { id: 'shop5', name: '쇼핑왕', desc: '아이템 5개 구매', icon: '🛍️', reward: 30, type: 'shopBuy', goal: 5 },
+  { id: 'mission10', name: '미션 헌터', desc: '미션 10개 완료', icon: '✅', reward: 80, type: 'missionsDone', goal: 10 },
+  { id: 'allpets10', name: '동물의 숲', desc: '펫 10마리 획득', icon: '🌍', reward: 300, type: 'pets', goal: 10 },
+  { id: 'morning', name: '아침형 인간', desc: '오전 7시 전 공부 시작', icon: '🌅', reward: 30, type: 'special', goal: 1 },
+  { id: 'night', name: '야행성', desc: '오후 11시 이후 공부', icon: '🌙', reward: 30, type: 'special', goal: 1 },
+];
+
+export const SHOP_ITEMS = {
+  wallpaper: [
+    { id: 'wall_cream', name: '크림 벽지', price: 0, owned: true },
+    { id: 'wall_mint', name: '민트 벽지', price: 30 },
+    { id: 'wall_lavender', name: '라벤더 벽지', price: 30 },
+    { id: 'wall_sky', name: '하늘 벽지', price: 40 },
+    { id: 'wall_dark', name: '다크 벽지', price: 60 },
+    { id: 'wall_forest', name: '숲 벽지', price: 80 },
+  ],
+  floor: [
+    { id: 'floor_wood', name: '원목 바닥', price: 0, owned: true },
+    { id: 'floor_tile', name: '타일 바닥', price: 40 },
+    { id: 'floor_marble', name: '대리석 바닥', price: 80 },
+    { id: 'floor_carpet', name: '카펫 바닥', price: 60 },
+  ],
+  furniture: [
+    { id: 'desk_basic', name: '기본 책상', price: 0, owned: true },
+    { id: 'desk_fancy', name: '고급 책상', price: 100 },
+    { id: 'bookshelf', name: '책장', price: 60 },
+    { id: 'lamp_desk', name: '스탠드 조명', price: 40 },
+    { id: 'plant_small', name: '작은 화분', price: 20 },
+    { id: 'plant_big', name: '큰 화분', price: 50 },
+    { id: 'couch', name: '소파', price: 120 },
+    { id: 'rug', name: '러그', price: 70 },
+  ],
+  decoration: [
+    { id: 'poster_star', name: '별 포스터', price: 25 },
+    { id: 'poster_city', name: '도시 포스터', price: 25 },
+    { id: 'clock_wall', name: '벽시계', price: 35 },
+    { id: 'fairy_lights', name: '무드등', price: 45 },
+    { id: 'trophy', name: '트로피', price: 80 },
+    { id: 'cat_figure', name: '고양이 피규어', price: 55 },
+  ],
+};
+
+export const SKIN_COLORS = [
+  { id: 's1', color: '#FDBCB4' },
+  { id: 's2', color: '#F4A574' },
+  { id: 's3', color: '#C88050' },
+  { id: 's4', color: '#8A5530' },
+  { id: 's5', color: '#6B3A2A' },
+];
+
+export const HAIR_STYLES = [
+  { id: 'short', label: '단발' },
+  { id: 'long', label: '긴머리' },
+  { id: 'curly', label: '곱슬' },
+  { id: 'bun', label: '올림머리' },
+  { id: 'twin', label: '트윈테일' },
+];
+
+export const HAIR_COLORS = [
+  { id: 'hc1', color: '#1A0A00' },
+  { id: 'hc2', color: '#3D2010' },
+  { id: 'hc3', color: '#8B5E3C' },
+  { id: 'hc4', color: '#C8A050' },
+  { id: 'hc5', color: '#E8D070' },
+  { id: 'hc6', color: '#D4607A' },
+  { id: 'hc7', color: '#6080E8' },
+  { id: 'hc8', color: '#A050C0' },
+];
+
+export const OUTFIT_COLORS = [
+  { id: 'oc1', color: '#6C8EBF' },
+  { id: 'oc2', color: '#E8806A' },
+  { id: 'oc3', color: '#6DBF8E' },
+  { id: 'oc4', color: '#C080D0' },
+  { id: 'oc5', color: '#E8C050' },
+  { id: 'oc6', color: '#7090A0' },
+  { id: 'oc7', color: '#E87090' },
+  { id: 'oc8', color: '#808080' },
+];
