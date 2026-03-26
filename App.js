@@ -22,6 +22,15 @@ export default function App() {
         <StatusBar style="light" />
         <NavigationContainer>
           <Stack.Navigator screenOptions={{ headerShown: false }}>
+            {/* 테스트용: 캐릭터 생성 없이 바로 마을 진입 */}
+            <Stack.Screen name="Main" component={MainTabNavigator} />
+            <Stack.Screen
+              name="Interior"
+              component={InteriorScreen}
+              options={{ presentation: 'modal' }}
+            />
+
+            {/* 원래 onboarding 경로 (필요하면 아래로 되돌리세요)
             {!characterCreated ? (
               <Stack.Screen name="CharacterCreate" component={CharacterCreateScreen} />
             ) : (
@@ -34,6 +43,7 @@ export default function App() {
                 />
               </>
             )}
+            */}
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
